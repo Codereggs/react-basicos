@@ -9,8 +9,8 @@ import RenderizadoElementos from "./components/RenderizadoElementos";
 import { EventosES6, EventosES7, MasSobreEventos } from "./components/Eventos";
 import Padre from "./components/ComunicacionComponentes";
 import CicloVida from "./components/CicloVida";
+import AjaxApis from "./components/AJAXApis";
 
-document.body.innerHtml = "Hola";
 
 function App() {
   return (
@@ -45,6 +45,7 @@ function App() {
               <Componente msg="Soy un componente pasado como Prop" />
             }
           />
+
           <hr />
           <Estado />
           <hr />
@@ -61,6 +62,8 @@ function App() {
           <Padre />
           <hr />
           <CicloVida />
+          <hr />
+          <AjaxApis />
         </section>
       </header>
     </div>
