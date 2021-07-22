@@ -19,12 +19,12 @@ export default class AjaxApis extends Component {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json);
+        //console.log(json);
         json.results.forEach((el) =>
           fetch(el.url)
             .then((res) => res.json())
             .then((json) => {
-              console.log(json);
+              // console.log(json);
               let pokemon = {
                   id: json.id,
                   name: json.name,
@@ -42,13 +42,15 @@ export default class AjaxApis extends Component {
     return (
       <>
         <h2>Peticiones Asíncronas en componentes de Clase</h2>
-        {this.state.pokemons.length === 0 ? (
-          <h3>Cargando...</h3>
-        ) : (
-          this.state.pokemons.map((el) => (
-            <Pokemon key={el.id} name={el.name} avatar={el.avatar} />
-          ))
-        )}
+        <div className="grid">
+          {this.state.pokemons.length === 0 ? (
+            <h3>Cargando...</h3>
+          ) : (
+            this.state.pokemons.map((el) => (
+              <Pokemon key={el.id} name={el.name} avatar={el.avatar} />
+            ))
+          )}
+        </div>
       </>
     );
   }

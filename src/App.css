@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 9rem);
+  grid-template-rows: repeat(4, 8rem);
+}
