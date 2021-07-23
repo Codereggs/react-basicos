@@ -39,6 +39,12 @@
 
 .grid {
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: repeat(4, 9rem);
   grid-template-rows: repeat(4, 8rem);
+}
+
+code {
+  font-size: 12px;
 }
